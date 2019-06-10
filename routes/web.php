@@ -19,6 +19,8 @@ Route::get('ping', function () {
     return 'pong';
 });
 
-Route::get('hello/{param}', function ($param) {
+$route = Route::get('hello/{param}', function ($param) {
     return "Hello $param";
 });
+
+dd($route);
