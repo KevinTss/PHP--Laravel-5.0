@@ -22,3 +22,17 @@ Route::get('ping', ['as' => 'ping', function () {
 Route::get('articles/{slug}-{id}', ['as' => 'article', function ($slug, $id) {
     return 'Link to this page: ' . route('article', ['slog' => $slug, 'id' => $id]);
 }])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
+
+Route::group(
+    [
+        'prefix' => 'admin'
+    ],
+    function () {
+        Route::get('users', function () {
+            return 'List of users';
+        });
+        Route::get('articles', function () {
+            return 'List of articles';
+        });
+    }
+);
