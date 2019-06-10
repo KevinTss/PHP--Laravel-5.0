@@ -25,7 +25,8 @@ Route::get('articles/{slug}-{id}', ['as' => 'article', function ($slug, $id) {
 
 Route::group(
     [
-        'prefix' => 'admin'
+        'prefix' => 'admin',
+        'middleware' => 'ip',
     ],
     function () {
         Route::get('users', function () {

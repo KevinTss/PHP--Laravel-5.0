@@ -15,6 +15,13 @@ class Ip
      */
     public function handle($request, Closure $next)
     {
+        $requestIp = $request->ip();
+        $authorizeIp = '127.0.0.1';
+
+        if ($requestIp !== $authorizeIp) {
+            return response('Unauthorized IP', 401);
+        }
+        
         return $next($request);
     }
 }
