@@ -20,5 +20,5 @@ Route::get('ping', ['as' => 'ping', function () {
 }]);
 
 Route::get('articles/{slug}-{id}', ['as' => 'article', function ($slug, $id) {
-    return "Slug: $slug - ID: $id";
+    return 'Link to this page: ' . route('article', ['slog' => $slug, 'id' => $id]);
 }])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
