@@ -19,8 +19,6 @@ Route::get('ping', function () {
     return 'pong';
 });
 
-$route = Route::get('hello/{param}', function ($param) {
-    return "Hello $param";
-});
-
-dd($route);
+Route::get('articles/{slug}-{id}', function ($slug, $id) {
+    return "Slug: $slug - ID: $id";
+})->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
