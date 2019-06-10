@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('ping', function () {
+Route::get('ping', ['as' => 'ping', function () {
     return 'pong';
-});
+}]);
 
-Route::get('articles/{slug}-{id}', function ($slug, $id) {
+Route::get('articles/{slug}-{id}', ['as' => 'article', function ($slug, $id) {
     return "Slug: $slug - ID: $id";
-})->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
+}])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
