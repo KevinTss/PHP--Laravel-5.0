@@ -39,3 +39,4 @@ Route::group(
 );
 
 Route::get('cars', 'CarController@index');
+Route::get('cars/{model}', 'CarController@getOne');

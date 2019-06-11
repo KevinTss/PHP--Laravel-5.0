@@ -8,4 +8,8 @@ class CarController {
 		return "List of cars";
 	}
 
+	public function getOne($model) {
+		return "This is a $model";
+	}
+
 }
