@@ -37,3 +37,5 @@ Route::group(
         });
     }
 );
+
+Route::get('cars', 'CarController@index');
