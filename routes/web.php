@@ -40,3 +40,5 @@ Route::group(
 
 Route::get('cars', 'CarController@index');
 Route::get('cars/{model}', 'CarController@getOne');
+
+Route::get('about', 'PagesController@about');
