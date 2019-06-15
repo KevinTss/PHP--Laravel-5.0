@@ -30,7 +30,15 @@
 
       <div class="starter-template">
 
-        @yield('content')
+        <div class="row">
+          <div class="col-sm-8">
+            @yield('content')
+          </div>
+          <div class="col-sm-4">
+            @yield('sidebar')
+          </div>
+        </div>
+
 
       </div>
 

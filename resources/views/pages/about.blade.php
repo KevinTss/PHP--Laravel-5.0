@@ -9,3 +9,17 @@
   </div>
 
 @endsection
+
+@section('sidebar')
+
+  <div style="padding: 50px 0;">
+
+  <h3>Adise menu</h3>
+    <ul>
+      <li>Side menu item</li>
+      <li>Side menu item</li>
+      <li>Side menu item</li>
+    </ul>
+  </div>
+
+@endsection
